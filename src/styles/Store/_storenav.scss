@@ -1,0 +1,46 @@
+.storenav {
+  display: none;
+
+  @include breakpoint-up(small) {
+    display: flex;
+
+    &-container {
+      width: 100%;
+      padding-top: 40%;
+      padding-left: 20px;
+
+      h4 {
+        margin-bottom: 30px;
+        font-size: 20px;
+        color: #172530;
+      }
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  //   justify-content: space-between;
+
+  &_img {
+    display: flex;
+    margin-right: 15px;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: #e5e6e2;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &-text {
+    color: #56827e;
+  }
+  .active {
+    color: #172530;
+  }
+}

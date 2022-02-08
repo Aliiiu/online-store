@@ -1,0 +1,27 @@
+.mainstore {
+  min-height: 100vh;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  @include breakpoint-up(small) {
+    overflow: hidden;
+  }
+
+  .storegrid {
+    height: 91.8vh;
+
+    @include breakpoint-up(small) {
+      display: grid;
+      grid-template-columns: 20vw 80vw;
+    }
+
+    @include breakpoint-up(large) {
+      height: 88.65vh;
+    }
+  }
+}
+
+.mainstore::-webkit-scrollbar {
+  width: 0px;
+  // background-color: violet;
+}

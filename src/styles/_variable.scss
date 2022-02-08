@@ -1,0 +1,45 @@
+//color
+$blueNav : #3c4380;
+$lightbluebg : #f5f7fa;
+$darkblueBg : #0d0e4f;
+$submenuBg: #1e3275; // Breakpoints
+
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+$headerfont1 :'Dosis',
+sans-serif;
+$headerfont2 : 'Playfair Display',
+serif;
+$bodyfont1: 'Ubuntu',
+sans-serif;
+$bodyfont2: 'Cormorant Garamond',
+serif;
+$bodyfont2bold: 'Cantata One',
+serif;
+
+@media (min-width: 64em) {}
+
+$breakpoints-down: (xsmall:280px, small: 40em,
+    medium: 64em,
+    large: 87.5em);
+
+$breakpoints-up: (xsmall:280px, small: 640px, medium: 768px,
+    large: 1025px,
+    xlarge: 1279px);
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}

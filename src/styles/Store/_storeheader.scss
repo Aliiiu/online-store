@@ -1,0 +1,110 @@
+.storeheader {
+  // padding: 10px;
+  height: 8.2vh;
+  display: grid;
+
+  @include breakpoint-down(small) {
+    // padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 22;
+    background-color: #f4fcff;
+  }
+
+  @include breakpoint-up(large) {
+    height: 11.35vh;
+  }
+
+  &-content {
+    display: flex;
+    padding: 5px 20px;
+    background-color: #17544e;
+    // border-radius: 999999px;
+    align-items: center;
+
+    @include breakpoint-down(small) {
+      justify-content: space-between;
+    }
+
+    .ham {
+      fill: white;
+    }
+
+    .content-search {
+      display: none;
+      @include breakpoint-up(small) {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+
+        .con {
+          padding: 5px;
+          border-radius: 99999px;
+          background-color: white;
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          input {
+            padding: 0 10px;
+            width: 50%;
+          }
+          button {
+            appearance: none;
+            padding: 10px;
+            background-color: #17544e;
+            color: white;
+            border-radius: 99px;
+          }
+        }
+      }
+    }
+
+    .content-cart {
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 30px;
+      position: relative;
+
+      &_icon {
+        background-color: #ffffff52;
+        border-radius: 50%;
+        padding: 8px;
+        display: flex;
+        margin-right: 5px;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      &_text {
+        background-color: #ffffff52;
+        border-radius: 24%;
+        padding: 7px 9px;
+        color: white;
+      }
+    }
+
+    .ava {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+  }
+}
+
+.product-length {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  padding: 3px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
